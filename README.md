@@ -4,7 +4,7 @@ Refer to the notes for how to wire up your components. These codes will allow yo
 
 **SimpleSpinMotors** will just make the motors spin for 5 seconds, and does not use the remote (you will need to reupload the code to change wheel speeds). This is to test if your motors are all working, and to trim the zero-speed point.
 
-**IR_Remote_Tester** does not move the motors, it will just turn the board LED on or off in response to the buttons. This is to test if your remote is working.
+**IR_Remote_Tester** does not move the motors, it will only turn the board LED on or off in response to the buttons. This is to test if your remote/receiver is working.
 
 **IR_MotorController** moves the motors in response to remote commands.
 
