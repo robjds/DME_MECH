@@ -55,11 +55,12 @@ void setup() {
 
 // the 'loop' section of the code runs over and over again until the board is reset/turned off.
 void loop(){
-  constrain(back_left_speed,0,180);
-  constrain(back_right_speed,0,180);
-  constrain(front_left_speed,0,180);
-  constrain(front_right_speed,0,180);
-  constrain(arm_position,0,180);
+  // Use constrain to keep calues in useable range
+  back_left_speed   = constrain(back_left_speed,0,180);
+  back_right_speed  = constrain(back_right_speed,0,180);
+  front_left_speed  = constrain(front_left_speed,0,180);
+  front_right_speed = constrain(front_right_speed,0,180);
+  arm_position = constrain(arm_position,0,180);
   updateServos();
   int key = getIRKey();        //Fetch the key
   
