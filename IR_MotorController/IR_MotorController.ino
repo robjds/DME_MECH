@@ -59,9 +59,6 @@ void setup() {
   front_left.write(FRONTLEFT_STOP);
   front_right.write(FRONTRIGHT_STOP);
   arm.write(90);
-
-  //  wait for the Serial monitor to be opened
-  while(!Serial){}
 }
 
 // the 'loop' section of the code runs over and over again until the board is reset/turned off.
@@ -130,6 +127,11 @@ void loop(){
       Serial.print("full stop \n");
       byte = 0;
     }
+    constain(back_left_speed,0,180);
+    constain(back_right_speed,0,180);
+    constain(front_left_speed,0,180);
+    constain(front_right_speed,0,180);
+    constain(arm_position,0,180);
     updateServos();
   }
   Serial.print("Done \n");
